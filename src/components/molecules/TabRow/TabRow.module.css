@@ -1,0 +1,118 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 6px var(--space-xs);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+}
+
+.row:hover {
+  background: rgba(0, 229, 255, 0.04);
+}
+
+.favicon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  object-fit: contain;
+}
+
+.faviconFallback {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--color-text-dim);
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-text-base);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.url {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--color-text-dim);
+  letter-spacing: 0.04em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---- Inline delete confirm ---- */
+.deleteBtn {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-dim);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 2px 4px;
+  opacity: 0;
+  transition: opacity var(--transition-fast), color var(--transition-fast);
+  line-height: 1;
+}
+
+.row:hover .deleteBtn {
+  opacity: 1;
+}
+
+.deleteBtn:hover {
+  color: #ff4455;
+}
+
+.inlineConfirm {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  flex-shrink: 0;
+}
+
+.confirmBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #39ff14;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  padding: 2px 4px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.confirmBtn:hover {
+  text-shadow: 0 0 6px currentColor;
+}
+
+.cancelBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-dim);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  padding: 2px 4px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.cancelBtn:hover {
+  color: var(--color-text-base);
+}

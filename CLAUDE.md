@@ -149,6 +149,11 @@ src/components/atoms/GlowButton/
 
 ---
 
+## SDD Workflow
+
+- **Artifact store**: always use `engram` when available — no `openspec` files unless explicitly requested or engram its not working
+- **Execution mode**: default to `auto` unless user asks for `interactive`
+
 ## What NOT to do
 
 - Do not install UI component libraries (MUI, Chakra, etc.) — the design is fully custom

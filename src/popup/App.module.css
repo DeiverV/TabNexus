@@ -50,6 +50,14 @@
   scrollbar-color: var(--color-neon-cyan) var(--color-bg-deep);
 }
 
+.mainDetail {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
 .footer {
   display: flex;
   align-items: center;

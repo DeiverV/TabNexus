@@ -1,0 +1,157 @@
+.panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--color-bg-raised);
+  border: 1px solid color-mix(in srgb, var(--module-glow, var(--color-neon-cyan)) 25%, transparent);
+  box-shadow:
+    0 0 12px color-mix(in srgb, var(--module-glow, var(--color-neon-cyan)) 10%, transparent),
+    var(--shadow-panel);
+  overflow: hidden;
+}
+
+/* Top accent stripe */
+.panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--module-glow, var(--color-neon-cyan));
+  box-shadow: 0 0 8px var(--module-glow, var(--color-neon-cyan));
+  z-index: 1;
+}
+
+/* Textures */
+.panel[data-texture='brushed-metal'] {
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.015) 0px,
+    rgba(255, 255, 255, 0.015) 1px,
+    transparent 1px,
+    transparent 3px
+  ),
+  var(--color-bg-raised);
+}
+
+.panel[data-texture='carbon-fiber'] {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.02) 0px,
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 1px,
+    transparent 8px
+  ),
+  repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.02) 0px,
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 1px,
+    transparent 8px
+  ),
+  var(--color-bg-raised);
+}
+
+/* ---- Toolbar ---- */
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-bg-panel);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-inset-top);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Session header ---- */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.createdAt {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--color-text-dim);
+  text-transform: uppercase;
+}
+
+/* ---- Restore placeholder ---- */
+.restoreBtn {
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+/* ---- Tab list ---- */
+.tabList {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+  padding: var(--space-xs) var(--space-sm);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-neon-cyan) var(--color-bg-deep);
+}
+
+.tabListInner {
+  display: flex;
+  flex-direction: column;
+}
+
+.emptyTabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--color-text-dim);
+}
+
+/* ---- Session name — click to rename ---- */
+.sessionNameClickable {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  flex: 1;
+}
+
+.sessionNameClickable:focus-visible {
+  outline: 1px solid var(--module-glow, var(--color-neon-cyan));
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ---- Rename input ---- */
+.renameInput {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--module-text, var(--color-neon-cyan));
+  outline: none;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-md, 14px);
+  color: var(--module-text, var(--color-neon-cyan));
+  padding: 2px 0;
+  letter-spacing: 0.04em;
+}
