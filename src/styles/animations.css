@@ -1,0 +1,92 @@
+/**
+ * TabNexus — Keyframe Animations
+ * Y2K / Frutiger Aero motion design
+ */
+
+/* ------------------------------------------------------------------
+ * LED Pulse — status indicator breathing
+ * ------------------------------------------------------------------ */
+@keyframes led-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+/* ------------------------------------------------------------------
+ * Text Flicker — CRT / terminal screen flicker
+ * ------------------------------------------------------------------ */
+@keyframes text-flicker {
+  0%, 95%, 100% { opacity: 1; }
+  96%           { opacity: 0.8; }
+  97%           { opacity: 1; }
+  98%           { opacity: 0.6; }
+  99%           { opacity: 1; }
+}
+
+/* ------------------------------------------------------------------
+ * Glow Pulse — neon glow breathing on panels
+ * ------------------------------------------------------------------ */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: var(--glow-cyan-sm); }
+  50%       { box-shadow: var(--glow-cyan-md); }
+}
+
+/* ------------------------------------------------------------------
+ * Scan Line — horizontal scan on capture
+ * ------------------------------------------------------------------ */
+@keyframes scan-line {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  10%  { opacity: 0.8; }
+  90%  { opacity: 0.8; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
+
+/* ------------------------------------------------------------------
+ * Power On — element appears with a snap + glow burst
+ * ------------------------------------------------------------------ */
+@keyframes power-on {
+  0%   { opacity: 0; transform: scaleY(0.02); filter: brightness(3); }
+  30%  { opacity: 1; transform: scaleY(1.02); filter: brightness(2); }
+  100% { opacity: 1; transform: scaleY(1); filter: brightness(1); }
+}
+
+/* ------------------------------------------------------------------
+ * Power Off — element disappears with collapse + fade
+ * ------------------------------------------------------------------ */
+@keyframes power-off {
+  0%   { opacity: 1; transform: scaleY(1); filter: brightness(1); }
+  70%  { opacity: 0.8; transform: scaleY(0.02); filter: brightness(3); }
+  100% { opacity: 0; transform: scaleY(0); filter: brightness(0); }
+}
+
+/* ------------------------------------------------------------------
+ * Slide In Right — sliding panel (detail view)
+ * ------------------------------------------------------------------ */
+@keyframes slide-in-right {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+/* ------------------------------------------------------------------
+ * Slide Out Right
+ * ------------------------------------------------------------------ */
+@keyframes slide-out-right {
+  from { transform: translateX(0);    opacity: 1; }
+  to   { transform: translateX(100%); opacity: 0; }
+}
+
+/* ------------------------------------------------------------------
+ * Snap Flash — full-panel flash on session capture
+ * ------------------------------------------------------------------ */
+@keyframes snap-flash {
+  0%   { opacity: 0; }
+  20%  { opacity: 0.6; }
+  100% { opacity: 0; }
+}
+
+/* ------------------------------------------------------------------
+ * Segment Blink — 7-segment display blink
+ * ------------------------------------------------------------------ */
+@keyframes segment-blink {
+  0%, 49% { opacity: 1; }
+  50%, 99% { opacity: 0.2; }
+}

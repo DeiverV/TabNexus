@@ -1,0 +1,21 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+.env
+
+# Coverage reports
+coverage/
+
+# Claude Code project config
+.claude/
+
+# SDD / Agent Teams artifacts
+.atl/
+
+# Dev planning artifacts
+PLAN.md
+
+# OS / shell dumps
+bash.exe.stackdump
+*.stackdump

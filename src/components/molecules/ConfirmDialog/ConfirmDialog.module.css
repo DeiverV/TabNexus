@@ -1,0 +1,61 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  animation: snap-flash 0.15s ease forwards;
+}
+
+.dialog {
+  width: 300px;
+  background: var(--color-bg-panel);
+  border: 1px solid var(--color-border-bright);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glow-cyan-md), var(--shadow-panel);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  animation: power-on 0.2s ease forwards;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-neon-cyan);
+  text-shadow: var(--glow-cyan-xs);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 2px 6px;
+  align-self: flex-start;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-bright);
+  text-shadow: var(--glow-cyan-xs);
+  line-height: 1.4;
+}
+
+.message {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-text-dim);
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: flex-end;
+}

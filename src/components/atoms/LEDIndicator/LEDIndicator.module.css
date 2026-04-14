@@ -1,0 +1,27 @@
+.led {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-neon-green);
+  box-shadow: var(--glow-green-sm);
+}
+
+.led[data-color='cyan'] {
+  background: var(--color-neon-cyan);
+  box-shadow: var(--glow-cyan-sm);
+}
+
+.led[data-color='magenta'] {
+  background: var(--color-neon-magenta);
+  box-shadow: var(--glow-magenta-sm);
+}
+
+.led[data-color='yellow'] {
+  background: var(--color-neon-yellow);
+  box-shadow: 0 0 8px rgba(255, 238, 0, 0.6), 0 0 16px rgba(255, 238, 0, 0.3);
+}
+
+.led[data-pulse='true'] {
+  animation: led-pulse 2s ease-in-out infinite;
+}

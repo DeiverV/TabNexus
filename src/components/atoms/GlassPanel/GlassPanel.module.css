@@ -1,0 +1,54 @@
+.panel {
+  position: relative;
+  background: var(--glass-bg);
+  border: var(--glass-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--shadow-panel);
+  overflow: hidden;
+}
+
+/* Highlight edge */
+.panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+}
+
+/* Textures */
+.panel[data-texture='brushed-metal'] {
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.015) 0px,
+    rgba(255, 255, 255, 0.015) 1px,
+    transparent 1px,
+    transparent 3px
+  ),
+  var(--glass-bg);
+}
+
+.panel[data-texture='carbon-fiber'] {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.02) 0px,
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 1px,
+    transparent 8px
+  ),
+  repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.02) 0px,
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 1px,
+    transparent 8px
+  ),
+  var(--glass-bg);
+}

@@ -1,0 +1,20 @@
+.text {
+  font-family: var(--font-mono);
+  color: var(--neon-color, var(--color-neon-cyan));
+  text-shadow:
+    0 0 8px color-mix(in srgb, var(--neon-color, var(--color-neon-cyan)) 60%, transparent),
+    0 0 16px color-mix(in srgb, var(--neon-color, var(--color-neon-cyan)) 30%, transparent);
+  letter-spacing: 0.05em;
+}
+
+.text[data-size='sm'] {
+  font-size: 10px;
+}
+
+.text[data-size='md'] {
+  font-size: 13px;
+}
+
+.text[data-size='lg'] {
+  font-size: 18px;
+}

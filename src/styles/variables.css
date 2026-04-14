@@ -1,0 +1,108 @@
+/**
+ * TabNexus — Design Tokens (Y2K / Frutiger Aero)
+ * CSS Custom Properties — single source of truth for the entire visual system.
+ */
+
+:root {
+  /* =========================================================
+   * TYPOGRAPHY
+   * ========================================================= */
+  --font-display: 'Orbitron', 'Share Tech Mono', monospace;
+  --font-mono: 'Share Tech Mono', 'VT323', monospace;
+  --font-segment: 'VT323', monospace;
+
+  /* =========================================================
+   * COLOR PALETTE — Base
+   * ========================================================= */
+  --color-bg-deep: #0a0c10;
+  --color-bg-panel: #0f1318;
+  --color-bg-raised: #141a22;
+  --color-bg-glass: rgba(20, 30, 45, 0.85);
+
+  --color-border: rgba(0, 200, 255, 0.12);
+  --color-border-bright: rgba(0, 200, 255, 0.35);
+
+  --color-text-dim: #8a9ab0;
+  --color-text-base: #c8d8e8;
+  --color-text-bright: #e8f4ff;
+
+  /* =========================================================
+   * NEON COLORS — Accent palette
+   * ========================================================= */
+  --color-neon-cyan:    #00e5ff;
+  --color-neon-green:   #00ff88;
+  --color-neon-blue:    #0088ff;
+  --color-neon-magenta: #ff00cc;
+  --color-neon-yellow:  #ffee00;
+  --color-neon-orange:  #ff6600;
+
+  /* =========================================================
+   * GLOW EFFECTS — text-shadow & box-shadow presets
+   * ========================================================= */
+
+  /* Cyan */
+  --glow-cyan-xs: 0 0 4px rgba(0, 229, 255, 0.4);
+  --glow-cyan-sm: 0 0 8px rgba(0, 229, 255, 0.6), 0 0 16px rgba(0, 229, 255, 0.3);
+  --glow-cyan-md: 0 0 8px rgba(0, 229, 255, 0.8), 0 0 20px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.2);
+  --glow-cyan-lg: 0 0 12px rgba(0, 229, 255, 1), 0 0 30px rgba(0, 229, 255, 0.7), 0 0 60px rgba(0, 229, 255, 0.3);
+
+  /* Green */
+  --glow-green-sm: 0 0 8px rgba(0, 255, 136, 0.6), 0 0 16px rgba(0, 255, 136, 0.3);
+  --glow-green-md: 0 0 8px rgba(0, 255, 136, 0.8), 0 0 20px rgba(0, 255, 136, 0.5), 0 0 40px rgba(0, 255, 136, 0.2);
+
+  /* Magenta */
+  --glow-magenta-sm: 0 0 8px rgba(255, 0, 204, 0.6), 0 0 16px rgba(255, 0, 204, 0.3);
+  --glow-magenta-md: 0 0 8px rgba(255, 0, 204, 0.8), 0 0 20px rgba(255, 0, 204, 0.5), 0 0 40px rgba(255, 0, 204, 0.2);
+
+  /* Blue */
+  --glow-blue-sm: 0 0 8px rgba(0, 136, 255, 0.6), 0 0 16px rgba(0, 136, 255, 0.3);
+  --glow-blue-md: 0 0 8px rgba(0, 136, 255, 0.8), 0 0 20px rgba(0, 136, 255, 0.5), 0 0 40px rgba(0, 136, 255, 0.2);
+
+  /* =========================================================
+   * BOX SHADOWS — Panel depth & skeuomorphism
+   * ========================================================= */
+  --shadow-inset-top: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --shadow-inset-full: inset 0 1px 0 rgba(255, 255, 255, 0.06), inset 0 -1px 0 rgba(0, 0, 0, 0.4);
+  --shadow-panel: 0 4px 16px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 255, 255, 0.04) inset;
+  --shadow-raised: 0 2px 8px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255, 255, 255, 0.08) inset;
+  --shadow-button-idle:
+    0 2px 6px rgba(0, 0, 0, 0.7),
+    0 1px 0 rgba(255, 255, 255, 0.1) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.5) inset;
+  --shadow-button-active:
+    0 1px 2px rgba(0, 0, 0, 0.9),
+    0 1px 0 rgba(0, 0, 0, 0.3) inset,
+    0 -1px 0 rgba(255, 255, 255, 0.05) inset;
+
+  /* =========================================================
+   * GLASSMORPHISM
+   * ========================================================= */
+  --glass-bg: rgba(14, 22, 35, 0.7);
+  --glass-border: 1px solid rgba(0, 200, 255, 0.15);
+  --glass-blur: blur(12px);
+
+  /* =========================================================
+   * SPACING
+   * ========================================================= */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  /* =========================================================
+   * BORDER RADIUS
+   * ========================================================= */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* =========================================================
+   * TRANSITIONS
+   * ========================================================= */
+  --transition-fast: 120ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 400ms ease;
+}

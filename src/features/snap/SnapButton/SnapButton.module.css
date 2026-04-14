@@ -1,0 +1,68 @@
+.button {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 229, 255, 0.4);
+  background: radial-gradient(
+    circle at 35% 35%,
+    rgba(0, 229, 255, 0.25) 0%,
+    rgba(0, 229, 255, 0.08) 60%,
+    transparent 100%
+  );
+  box-shadow:
+    var(--shadow-button-idle),
+    var(--glow-cyan-sm),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  color: var(--color-neon-cyan);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    box-shadow var(--transition-base),
+    transform var(--transition-fast),
+    filter var(--transition-base);
+}
+
+.button:hover:not(:disabled) {
+  box-shadow:
+    var(--shadow-button-idle),
+    var(--glow-cyan-md);
+  filter: brightness(1.2);
+}
+
+.button:active:not(:disabled) {
+  transform: scale(0.95);
+  box-shadow: var(--shadow-button-active), var(--glow-cyan-xs);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+/* Outer decorative ring */
+.ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  pointer-events: none;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-neon-cyan);
+  filter: drop-shadow(0 0 4px var(--color-neon-cyan));
+}
+
+/* Scan animation during capture */
+.button[data-capturing='true'] {
+  animation: glow-pulse 0.8s ease-in-out infinite;
+}
+
+.button[data-capturing='true'] .icon {
+  animation: led-pulse 0.4s ease-in-out infinite;
+}
